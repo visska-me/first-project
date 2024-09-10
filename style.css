@@ -65,14 +65,12 @@ body {
 }
 
 
-/* Три колонки на больших экранах */
 @media (min-width: 768px) {
   .column {
       flex: 1;
   }
 }
 
-/* Одна колонка на мобильных устройствах */
 @media (max-width: 767px) {
   .column {
       flex: 100%;
