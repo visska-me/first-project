@@ -18,12 +18,11 @@ body {
 }
 
 .cover {
-  position: relative;
   min-height: 550px;
-  background-image: url("../images/cover.jpg");
+  background-image: url("../images/cover-dog.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
+  background-position: top center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,17 +30,8 @@ body {
 }
 
 .cover-title {
-  position: relative;
-  z-index: 2;
   font-size: 30px;
-  text-transform: uppercase;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
 }
 
 .class {
@@ -57,11 +47,11 @@ body {
   padding: 20px;
   text-align: center;
   margin: 10px;
-  border: #AA5BBE solid 1px;
+  border: #151e12 solid 1px;
 }
 
 .column-header {
-  color: #AA5BBE;
+  color: #151e12;
 }
 
 
