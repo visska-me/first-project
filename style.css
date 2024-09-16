@@ -2,68 +2,201 @@ body {
   font-family: Verdana, Arial, sans-serif;
   margin: 0;
   padding: 0;
+}
 
-.header-logo {
-  width: 50px;
-  display: block;
+ul, li, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
 }
 
 .header {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  height: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-.header-logo-image {
-  max-height: 60px;
+.header-menu {
+  font-size: 16px;
+  position: absolute;
+  padding-left: 30px;
+  top: 25%;
+}
+
+.header-links-list {
+  display: block;
+  margin-right: 20px;
+  float: right;
+}
+
+.header-links-list-item {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.header-link {
+  text-decoration: none;
+  text-underline-offset: 4px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.header-link:hover {
+  color: rgb(92, 94, 90);
 }
 
 .cover {
-  min-height: 550px;
-  background-image: url("../images/cover-dog.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+  position: relative;
+  width: auto;
+  min-height: 60vh;
+  overflow: hidden;
+}
+
+.cover-image {
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .cover-title {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
   font-size: 30px;
   color: #ffffff;
+  transform: translate(-50%, -50%);
 }
 
-.class {
-  font-size: 18px;
+
+/* For mobile devices, I have a layout with single-column content */
+.myweek {
+  position: relative;
+  margin-top: 20px;
+  padding: 0 10px;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.column {
-  padding: 20px;
+.list-title {
   text-align: center;
-  margin: 10px;
+  font-size: 20px;    
+}
+
+.column-list {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.column-item {
+  width: 100%;
+  list-style-type: none;
   border: #151e12 solid 1px;
+  margin: 10px 0;
 }
 
-.column-header {
+.column-title {
   color: #151e12;
+  font-size: 18px;
+  padding-top: 20px;
 }
 
+.column-text {
+  font-size: 16px;
+  padding: 0 20px 10px;
+}
 
-@media (min-width: 768px) {
-  .column {
-      flex: 1;
+.footer {
+  font-size: 16px;
+  padding: 30px;
+  background-color: #151e12;
+  color: white;
+}
+
+/* For tablets: Increased the font sizes. Adjusted the cover section. Two-column layout for "my week", last item spans across both columns.*/
+
+@media (min-width: 481px) and (max-width: 1024px) {
+
+  .header-menu {
+    font-size: 18px;
+  }
+
+  .cover {
+    min-height: 70vh; 
+  }
+
+  .cover-title {
+    font-size: 32px;
+  }
+
+  .column-item {
+    width: 46%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1%;
+    min-height: 166px;
+  }
+
+  .column-header {
+    font-size: 24px; 
+  }
+
+  .column-text {
+    font-size: 18px; 
+  }
+
+  .column-item:last-child {
+    width: calc(98% - 20px);
+  }
+
+  .footer {
+    font-size: 18px;
   }
 }
 
-@media (max-width: 767px) {
-  .column {
-      flex: 100%;
+/* three-column layout for desktops 
+Increased the font sizes. Adjusted the cover section. 
+Arranged the "my week" section into three columns. There are two elements left in the last row, I set their width so that they fill the entire block.
+*/
+
+@media (min-width: 1025px) {
+
+  .header-menu {
+    font-size: 20px;
   }
-}
+
+  .cover {
+    min-height: 80vh; 
+  }
+
+  .cover-title {
+    font-size: 40px; 
+  }
+
+  .column-item {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1%;
+    min-height: 166px;
+  }
+
+  .column-item:nth-last-child(2), .column-item:nth-last-child(1) {
+    width: 46%;
+  }
+
+  .column-header {
+    font-size: 28px; 
+  }
+
+  .column-text {
+    font-size: 20px; 
+  }
+
+  .footer {
+    font-size: 20px;
+  }
 }
